@@ -26,6 +26,22 @@ client.connect(err => {
             })
     });
 
+
+    app.get('/reviews', (req, res) => {
+        reviewCollection.find()
+            .toArray((err, items) => {
+                res.send(items);
+            })
+    });
+
+    app.get('/service/:id', (req, res) => {
+        serviceCollection.find({ _id: ObjectId(req.params.id) })
+            .toArray((err, item) => {
+                res.send(item[0]);
+            })
+    });
+
+
     app.post('/addService', (req, res) => {
         const services = req.body;
         serviceCollection.insertOne(services)
