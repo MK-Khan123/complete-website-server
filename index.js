@@ -18,6 +18,8 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 client.connect(err => {
     const serviceCollection = client.db("autoShop").collection("services");
     const reviewCollection = client.db("autoShop").collection("reviews");
+    const orderCollection = client.db("autoShop").collection("orders");
+    const adminCollection = client.db("autoShop").collection("admin");
 
     app.get('/services', (req, res) => {
         serviceCollection.find()
@@ -38,6 +40,20 @@ client.connect(err => {
         serviceCollection.find({ _id: ObjectId(req.params.id) })
             .toArray((err, item) => {
                 res.send(item[0]);
+            })
+    });
+
+    app.get('/orders', (req, res) => {
+        orderCollection.find({ email: req.query.email })
+            .toArray((err, documents) => {
+                res.send(documents);
+            })
+    });
+
+    app.get('/allOrders', (req, res) => {
+        orderCollection.find()
+            .toArray((err, items) => {
+                res.send(items);
             })
     });
 
@@ -62,6 +78,24 @@ client.connect(err => {
     });
 
 
+    app.post('/addOrder', (req, res) => {
+        const orders = req.body;
+        orderCollection.insertOne(orders)
+            .then(result => {
+                console.log(result.insertedCount);
+                res.send(result.insertedCount > 0);
+            })
+    });
+
+    app.patch('/updateStatus/:id', (req, res) => {
+        orderCollection.updateOne({ _id: ObjectId(req.params.id) },
+          {
+            $set: { status: req.body.status }
+          })
+          .then(result => {
+            res.send(result.modifiedCount > 0);
+          })
+      });
 
 });
 
