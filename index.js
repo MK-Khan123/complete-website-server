@@ -50,6 +50,13 @@ client.connect(err => {
             })
     });
 
+    app.get('/isAdmin', (req, res) => {
+        adminCollection.find({ email: req.query.email })
+            .toArray((err, documents) => {
+                res.send(documents.length > 0);
+            })
+    });
+
     app.get('/allOrders', (req, res) => {
         orderCollection.find()
             .toArray((err, items) => {
@@ -96,6 +103,24 @@ client.connect(err => {
             res.send(result.modifiedCount > 0);
           })
       });
+
+      app.post('/addAdmin', (req, res) => {
+        const admin = req.body;
+        adminCollection.insertOne(admin)
+            .then(result => {
+                console.log(result.insertedCount);
+                res.send(result.insertedCount > 0);
+            })
+    });
+
+    app.delete('/deleteService/:id', (req, res) => {
+        const id = ObjectId(req.params.id);
+        serviceCollection.findOneAndDelete({ _id: id })
+            .then(result => {
+                console.log("product deleted successfully");
+                res.send(result);
+            })
+    });
 
 });
 
