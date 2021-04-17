@@ -1,0 +1,53 @@
+const express = require('express');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const MongoClient = require('mongodb').MongoClient;
+const ObjectId = require('mongodb').ObjectId;
+require('dotenv').config();
+
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.s88xr.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
+
+const app = express();
+app.use(cors());
+app.use(bodyParser.json());
+
+const port = process.env.PORT || 5000;
+
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+
+client.connect(err => {
+    const serviceCollection = client.db("autoShop").collection("services");
+    const reviewCollection = client.db("autoShop").collection("reviews");
+
+    app.get('/services', (req, res) => {
+        serviceCollection.find()
+            .toArray((err, items) => {
+                res.send(items);
+            })
+    });
+
+    app.post('/addService', (req, res) => {
+        const services = req.body;
+        serviceCollection.insertOne(services)
+            .then(result => {
+                console.log(result.insertedCount);
+                res.send(result.insertedCount > 0);
+            })
+    });
+
+
+    app.post('/addReview', (req, res) => {
+        const reviews = req.body;
+        reviewCollection.insertOne(reviews)
+            .then(result => {
+                console.log(result.insertedCount);
+                res.send(result.insertedCount > 0);
+            })
+    });
+
+
+
+});
+
+
+app.listen(port);
