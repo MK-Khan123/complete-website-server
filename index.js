@@ -28,7 +28,6 @@ client.connect(err => {
             })
     });
 
-
     app.get('/reviews', (req, res) => {
         reviewCollection.find()
             .toArray((err, items) => {
@@ -64,7 +63,6 @@ client.connect(err => {
             })
     });
 
-
     app.post('/addService', (req, res) => {
         const services = req.body;
         serviceCollection.insertOne(services)
@@ -74,7 +72,6 @@ client.connect(err => {
             })
     });
 
-
     app.post('/addReview', (req, res) => {
         const reviews = req.body;
         reviewCollection.insertOne(reviews)
@@ -83,7 +80,6 @@ client.connect(err => {
                 res.send(result.insertedCount > 0);
             })
     });
-
 
     app.post('/addOrder', (req, res) => {
         const orders = req.body;
@@ -96,15 +92,15 @@ client.connect(err => {
 
     app.patch('/updateStatus/:id', (req, res) => {
         orderCollection.updateOne({ _id: ObjectId(req.params.id) },
-          {
-            $set: { status: req.body.status }
-          })
-          .then(result => {
-            res.send(result.modifiedCount > 0);
-          })
-      });
+            {
+                $set: { status: req.body.status }
+            })
+            .then(result => {
+                res.send(result.modifiedCount > 0);
+            })
+    });
 
-      app.post('/addAdmin', (req, res) => {
+    app.post('/addAdmin', (req, res) => {
         const admin = req.body;
         adminCollection.insertOne(admin)
             .then(result => {
@@ -123,6 +119,5 @@ client.connect(err => {
     });
 
 });
-
 
 app.listen(port);
