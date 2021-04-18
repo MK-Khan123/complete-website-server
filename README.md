@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Firebase Live Site Link
 
-The project was deployed at Firebase. One can access the link by clicking here Firebase Live Site Link.
+The project was deployed at Firebase. One can access the link by clicking here [Firebase Live Site Link](https://complete-website-assignm-474e8.firebaseapp.com/).
 
 ### `Project Features`
 
