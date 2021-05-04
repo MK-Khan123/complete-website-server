@@ -18,7 +18,7 @@ In this project, we were introduced to the idea of Payment Gateway (specifically
 
 4. Exhausted CRUD operations on multiple occasions while building the website. Implemented Admin/User differentiation. Admin can add/remove/status of different services and changes are reflected immediately on the website. Status updates are immediately reflected on User Panel. An admin is capable of adding another user as an admin.
 
-5. In addition, we used plain bootstrap to make the website device responsive. Furthermore, we deployed our site on Firebase which can be accessed through the above mentioned link to experience the website.
+5. In addition, we used plain bootstrap to make the website device responsive (for mobile and desktop version). Furthermore, we deployed our site on Firebase which can be accessed through the above mentioned link to experience the website.
 
 Some screenshots of the project, 
 [Homepage](https://ibb.co/0Y0MnT5),
