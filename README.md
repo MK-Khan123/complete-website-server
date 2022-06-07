@@ -21,17 +21,18 @@ In this project, we were introduced to the idea of Payment Gateway (specifically
 5. In addition, we used React Bootstrap to make the website device responsive (for mobile and desktop version). Furthermore, we deployed our site on Firebase which can be accessed through the above mentioned link to explore the website.
 
 Some screenshots of the project, 
-![Homepage](https://ibb.co/0Y0MnT5),
-![Review section](https://ibb.co/C2hYG1B),
-![Footer section](https://ibb.co/CbBHmCP),
-![Login page](https://ibb.co/zVVsft5),
-![Checkout page](https://ibb.co/crTGCBH),
-![Individual Order Summary](https://ibb.co/CmbVvc9),
-![Add User Review page](https://ibb.co/W0vm5YK),
-![All Order List page](https://ibb.co/4VByCSD),
-![Add Services page](https://ibb.co/x80yMDh),
-![Make Admin page](https://ibb.co/cbsBpwY),
-![Manage Services](https://ibb.co/68hVDwS).
+![Homepage](https://i.ibb.co/Phj9q74/complete1.png)
+![Our Services](https://i.ibb.co/L86qKNq/complete2.png)
+![Review section](https://i.ibb.co/n1xdDtk/complete3.png)
+![Footer section](https://i.ibb.co/bdYw2BS/complete4.png)
+![Login page](https://i.ibb.co/pRLq7ZQ/complete5.png)
+![Individual Order Summary](https://i.ibb.co/db0qjgH/complete6.png)
+<!-- ![Checkout page](https://ibb.co/crTGCBH)
+![Add User Review page](https://ibb.co/W0vm5YK)
+![All Order List page](https://ibb.co/4VByCSD)
+![Add Services page](https://ibb.co/x80yMDh)
+![Make Admin page](https://ibb.co/cbsBpwY)
+![Manage Services](https://ibb.co/68hVDwS) -->
 
 In order to access the client side code of this website, please [click here](https://github.com/MK-Khan123/complete-website-client).
 
