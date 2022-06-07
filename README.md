@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Firebase Live Site Link
+## `Firebase Live Site Link`
 
 The project was deployed at Firebase. One can access the link by clicking here [Firebase Live Site Link](https://complete-website-assignm-474e8.firebaseapp.com/).
 
@@ -18,23 +18,23 @@ In this project, we were introduced to the idea of Payment Gateway (specifically
 
 4. Exhausted CRUD operations on multiple occasions while building the website. Implemented Admin/User differentiation. Admin can add/remove/status of different services and changes are reflected immediately on the website. Status updates are immediately reflected on User Panel. An admin is capable of adding another user as an admin.
 
-5. In addition, we used plain bootstrap to make the website device responsive (for mobile and desktop version). Furthermore, we deployed our site on Firebase which can be accessed through the above mentioned link to experience the website.
+5. In addition, we used React Bootstrap to make the website device responsive (for mobile and desktop version). Furthermore, we deployed our site on Firebase which can be accessed through the above mentioned link to explore the website.
 
 Some screenshots of the project, 
-[Homepage](https://ibb.co/0Y0MnT5),
-[Review section](https://ibb.co/C2hYG1B),
-[Footer section](https://ibb.co/CbBHmCP),
-[Login page](https://ibb.co/zVVsft5),
-[Checkout page](https://ibb.co/crTGCBH),
-[Individual Order Summary](https://ibb.co/CmbVvc9),
-[Add User Review page](https://ibb.co/W0vm5YK),
-[All Order List page](https://ibb.co/4VByCSD),
-[Add Services page](https://ibb.co/x80yMDh),
-[Make Admin page](https://ibb.co/cbsBpwY),
-[Manage Services](https://ibb.co/68hVDwS).
+![Homepage](https://ibb.co/0Y0MnT5),
+![Review section](https://ibb.co/C2hYG1B),
+![Footer section](https://ibb.co/CbBHmCP),
+![Login page](https://ibb.co/zVVsft5),
+![Checkout page](https://ibb.co/crTGCBH),
+![Individual Order Summary](https://ibb.co/CmbVvc9),
+![Add User Review page](https://ibb.co/W0vm5YK),
+![All Order List page](https://ibb.co/4VByCSD),
+![Add Services page](https://ibb.co/x80yMDh),
+![Make Admin page](https://ibb.co/cbsBpwY),
+![Manage Services](https://ibb.co/68hVDwS).
 
 In order to access the client side code of this website, please [click here](https://github.com/MK-Khan123/complete-website-client).
 
-You can contact me through [LinkedIn](https://www.linkedin.com/in/mehnaz-ahmed-khan31/), [Twitter](https://twitter.com/MehnazAhmedKha1) or through my email mehnazkhan231@gmail.com.
+You can contact me through [LinkedIn](https://www.linkedin.com/in/mehnaz-ahmed-khan/), [Twitter](https://twitter.com/MehnazAhmedKha1) or through my email mehnazkhan231@gmail.com.
 
 Thank you.
